@@ -31,7 +31,6 @@
             <div class="left-panel">
                 <div class="top-wrapper">
                     <header class="header-group">
-                        <!-- Updated to relative path -->
                         <img src="Image/P1/Logo.pic.jpg" alt="FocoSpeaker Logo" class="logo">
                         <h1>FocoSpeaker</h1>
                     </header>
@@ -50,7 +49,6 @@
             </div>
 
             <div class="right-panel">
-                <!-- Updated to relative paths -->
                 <img src="Image/P1/Model1.jpg" alt="Main Speaker Model" class="model-main">
                 <img src="Image/P1/Model2.jpg" alt="Secondary Speaker Model" class="model-secondary">
             </div>
@@ -65,8 +63,6 @@
                 <h2 class="model-headline">
                     FocoSpeaker Aims to Increase the Efficiency and Pleasure of Dancers in Group Dance Practice
                 </h2>
-                
-                <!-- Thumbnails with NEW filenames -->
                 <div class="thumbnail-row">
                     <div class="thumb-card">
                         <img src="Image/P2/top-view.png" alt="Top View">
@@ -91,13 +87,15 @@
     <!-- PAGE 3: SIMPLE SHOWCASE -->
     <section class="simple-showcase-section" id="model-showcase">
         <div class="showcase-content">
-                    <video autoplay loop muted playsinline class="main-product-3d" style="width: 100%; height: auto; display: block; border-radius: 10px;">
-                        <source src="Image/Animation/FocoSpeaker Animation Group.mp4" type="video/mp4">
-                    </video>
+            <div id="video-carousel-wrapper" style="background-color: #000; border-radius: 10px; overflow: hidden; width: 100%; position: relative;">
+                <video id="carousel-video" autoplay muted playsinline class="main-product-3d" 
+                       style="width: 100%; height: auto; display: block; opacity: 1; transition: opacity 0.4s ease-in-out;">
+                    <source src="Image/Animation/Top.mp4" type="video/mp4">
+                </video>
+
+            </div>
         </div>
     </section>
-
-        <!-- 引入新字体 Federant -->
     <link href="https://fonts.googleapis.com/css2?family=Federant&display=swap" rel="stylesheet">
 
 
@@ -105,7 +103,6 @@
 <section class="research-details-section" id="research-process">
     <div class="research-details-container">
         
-        <!-- LEFT COLUMN: INCENTIVE STORIES -->
         <div class="stories-col">
             <header class="section-header">
                 <img src="Image/P3/Icon.png" alt="icon" class="header-icon">
@@ -116,7 +113,6 @@
                     <img src="Image/P4/Incentive.jpg" alt="Staircase Dancers" class="staircase-img">
                 </div>
                 <div class="story-blocks">
-                    <!-- Block 1 -->
                     <div class="story-block block-1">
                         <div class="block-content">
                             <p class="story-text">
@@ -124,7 +120,6 @@
                             </p>
                         </div>
                     </div>
-                    <!-- Block 2 -->
                     <div class="story-block block-2">
                         <div class="block-content">
                             <p class="story-text">
@@ -135,7 +130,6 @@
                             </p>
                         </div>
                     </div>
-                    <!-- Block 3 -->
                     <div class="story-block block-3">
                         <div class="block-content">
                             <p class="story-quote-large">
@@ -147,14 +141,12 @@
             </div>
         </div>
 
-        <!-- RIGHT COLUMN: RESEARCH INTERVIEWS -->
         <div class="interviews-col">
             <header class="section-header">
                 <img src="Image/P3/Icon.png" alt="icon" class="header-icon">
                 <h2 class="section-title">Research Interviews</h2>
             </header>
             <div class="interview-list">
-                <!-- Interview 1 (Avatar Left) -->
                 <div class="interview-item avatar-left">
                     <div class="avatar-box">
                         <img src="Image/P4/Dauphine.png" alt="Dauphine T.">
@@ -169,8 +161,6 @@
                         <p class="card-identity">Dauphine T. - Chinese Traditional & Modern Dance (11 yrs experience)</p>
                     </div>
                 </div>
-
-                <!-- Interview 2 (Avatar Right) -->
                 <div class="interview-item avatar-right">
                     <div class="avatar-box">
                         <img src="Image/P4/Echo.png" alt="Echo Z.">
@@ -185,8 +175,6 @@
                         <p class="card-identity">Echo Z. - Jazz & K-POP Dance (4 yrs experience)</p>
                     </div>
                 </div>
-
-                <!-- Interview 3 (Avatar Left) -->
                 <div class="interview-item avatar-left">
                     <div class="avatar-box">
                         <img src="Image/P4/Junie.png" alt="Junie F.">
@@ -201,8 +189,6 @@
                         <p class="card-identity">Junie F. - International Standard Ballroom Dancer & Teacher</p>
                     </div>
                 </div>
-
-                <!-- Interview 4 (Avatar Right) -->
                 <div class="interview-item avatar-right">
                     <div class="avatar-box">
                         <img src="Image/P4/Amy.png" alt="Amy Z.">
@@ -226,32 +212,21 @@
 <!-- PAGE 5: JOURNEY MAP -->
 <section class="journey-section">
     <div class="journey-container">
-        
-        <!-- Header -->
         <header class="section-header">
             <img src="Image/P3/Icon.png" alt="icon" class="header-icon">
             <h2 class="section-title">Journey Map</h2>
         </header>
-        
-        <!-- Description Text -->
         <p class="journey-description">
             Through a journey map of group practice, I found that when <span class="highlight-blue">dancers review their weak parts in the same space</span>, the <span class="highlight-blue">music overlaps, creating distractions</span> that negatively affect practice.
         </p>
-
-        <!-- Map Display with Animation Wrapper -->
         <div class="journey-map-display" id="journeyMapTrigger">
-            <!-- 1. The Base Map -->
             <img src="Image/P5/JourneyMap.jpg" alt="Journey Map Visualization" class="journey-img">
-            
-            <!-- 2. The Overlay Image (Brown Block) -->
-            <!-- Ensure this image is saved in your folder -->
             <img src="Image/P5/MapText.jpg" alt="Key Insight Overlay" class="overlay-img">
         </div>
 
     </div>
 </section>
 
-<!-- Scroll Scrub Animation Script -->
 <script>
     document.addEventListener("scroll", function() {
         const container = document.getElementById('journeyMapTrigger');
@@ -259,43 +234,16 @@
         const overlayImg = container.querySelector('.overlay-img');
 
         if (!container || !mapImg || !overlayImg) return;
-
-        // Get dimensions
         const rect = container.getBoundingClientRect();
         const windowHeight = window.innerHeight;
-
-        // --- MATH LOGIC ---
-        // Start Animation: When the TOP of the image is at 70% of the viewport height (entering view)
         const startPoint = windowHeight * 0.7;
-        
-        // End Animation: When the BOTTOM of the image is at 100% of the viewport height (fully entered view)
-        // We use a small offset (rect.height * 0.2) to ensure it finishes just before it leaves or as it fully settles.
         const endPoint = windowHeight - (rect.height * 0.1); 
-
-        // Calculate total scrollable distance for the effect
-        // Current position relative to the start point
         const currentPos = startPoint - rect.top;
-        
-        // The distance between starting to fade and finishing fading
-        // This makes sure the animation completes exactly as the bottom becomes visible.
         const totalDistance = startPoint - (windowHeight - rect.height);
-
-        // Calculate progress (0 to 1)
         let progress = currentPos / totalDistance;
-
-        // Clamp values between 0 and 1
         if (progress < 0) progress = 0;
         if (progress > 1) progress = 1;
-
-        // --- APPLY STYLES ---
-        
-        // Map: Fades from 1.0 down to 0.6
-        // Formula: 1 - (progress * 0.4)
-        // If progress is 0 -> 1.0
-        // If progress is 1 -> 0.6
         mapImg.style.opacity = (1 - (progress * 0.4)).toFixed(2);
-
-        // Overlay: Fades from 0 to 1.0
         overlayImg.style.opacity = progress.toFixed(2);
     });
 </script>
@@ -314,8 +262,6 @@
         </p>
 
         <div class="position-cards">
-            
-            <!-- CARD 1: Orange Text -->
             <div class="position-card wide-card">
                 <div class="card-text-wrapper">
                     <h3 class="card-heading">1 - MOST COMMON</h3>
@@ -329,8 +275,6 @@
                     <img src="Image/P6/MostCommon2.jpg" alt="Most Common Scenario B" class="card-img">
                 </div>
             </div>
-
-            <!-- CARD 2: Brown Text -->
             <div class="position-card standard-card">
                 <div class="card-text-wrapper">
                     <h3 class="card-heading">2 - COMMON</h3>
@@ -343,8 +287,6 @@
                     <img src="Image/P6/Common.jpg" alt="Common Scenario" class="card-img">
                 </div>
             </div>
-
-            <!-- CARD 3: Brown Text -->
             <div class="position-card standard-card">
                 <div class="card-text-wrapper">
                     <h3 class="card-heading">3 - RARE</h3>
@@ -366,13 +308,8 @@
 <section class="analysis-section">
     <div class="analysis-container">
         
-        <!-- MAIN SPLIT: Left (Problem+Idea) vs Right (Tech) -->
         <div class="analysis-main-split">
-
-            <!-- LEFT MAIN COLUMN -->
             <div class="left-split-col">
-                
-                <!-- 1. Problem & Insights Block -->
                 <div class="analysis-block">
                     <header class="section-header">
                         <img src="Image/P3/Icon.png" alt="icon" class="header-icon">
@@ -383,9 +320,7 @@
                     </div>
                 </div>
 
-                <!-- 2. Initial Idea Block -->
                 <div class="analysis-block initial-idea-block">
-                    <!-- Header Group -->
                     <div class="initial-idea-header-group">
                         <div class="header-inline">
                             <img src="Image/P3/Icon.png" alt="icon" class="header-icon">
@@ -396,23 +331,17 @@
                         </p>
                     </div>
 
-                    <!-- Split Images (Side by Side) -->
                     <div class="split-visual-row">
-                        <!-- Image 1: Design Opportunities -->
                         <div class="visual-col">
                             <img src="Image/P7/DesignOpportunities.jpg" alt="Design Opportunities" class="analysis-img">
                         </div>
-                        
-                        <!-- Image 2: Solutions -->
                         <div class="visual-col">
                             <img src="Image/P7/Solutions.jpg" alt="Proposed Solution" class="analysis-img">
                         </div>
                     </div>
                 </div>
+            </div>
 
-            </div> <!-- End Left Column -->
-
-            <!-- RIGHT MAIN COLUMN: Technology Research -->
             <div class="right-split-col">
                 <div class="analysis-block">
                     <header class="section-header">
@@ -423,7 +352,7 @@
                         <img src="Image/P7/Technology Research.jpg" alt="Technology Research Matrix" class="analysis-img">
                     </div>
                 </div>
-            </div> <!-- End Right Column -->
+            </div> 
 
         </div>
     </div>
@@ -432,27 +361,16 @@
 <!-- PAGE 8: USAGE SCENARIO -->
 <section class="usage-scenario-section" id="page8Section">
     <div class="usage-scenario-container">
-        
-        <!-- Upper Row: Title Left + Image Right -->
         <div class="scenario-content-row">
-            
-            <!-- Left Side: Vertical Title -->
             <div class="title-wrapper">
                 <h2 class="vertical-scenario-title">Usage Scenario</h2>
             </div>
-
-            <!-- Right Side: Dual Image Wrapper for Animation -->
             <div class="scenario-image-wrapper">
-                <!-- 1. The Base Image (Original) -->
                 <img src="Image/P8/Scenario.jpg" alt="Base Scenario" class="scenario-img base-img">
-                
-                <!-- 2. The Highlight Image (Orange Border) - Starts Invisible -->
                 <img src="Image/P8/Scenario Outline.jpg" alt="Highlighted Scenario" class="scenario-img highlight-img">
             </div>
 
         </div>
-
-        <!-- Bottom: Description - Starts Invisible -->
         <p class="scenario-caption" id="page8Caption">
             I brainstormed 3 scenarios of the product, and finally decided to implement the product in the scenario of <span class="highlight-blue">multiple people rehearsing the same group dance repertoire in the same studio, but each practice different parts of the repertoire with music.</span>
         </p>
@@ -463,7 +381,6 @@
 <!-- PAGE 9: IDEATION SKETCH -->
 <section class="ideation-section">
     <div class="ideation-container">
-        <!-- Title using the Federant font you imported earlier -->
         <h2 class="ideation-title">Ideation Sketch</h2>
         
         <div class="sketch-wrapper">
@@ -476,7 +393,6 @@
 <section class="concept-section" id="concept-prototype">
     <div class="concept-container">
         
-        <!-- Section Header -->
         <header class="concept-header">
             <div class="header-inline">
                 <img src="Image/P3/Icon.png" alt="icon" class="header-icon">
@@ -487,10 +403,8 @@
             </p>
         </header>
 
-        <!-- 3 Columns Wrapper -->
         <div class="concept-columns">
             
-            <!-- COLUMN 1: Flat-Lay -->
             <div class="concept-card">
                 <h3 class="direction-title">Direction 1 Flat-Lay</h3>
                 
@@ -501,28 +415,24 @@
                 <div class="testing-section">
                     <h4 class="sub-label">Prototype Testing</h4>
                     <div class="testing-grid">
-                        <!-- Image 1 -->
                         <div class="test-wrapper">
                             <img src="Image/P10/Flat Lay 1.pic.jpg" alt="Connect Bluetooth" class="test-img">
                             <div class="test-overlay">
                                 <p class="test-caption">Connect Bluetooth</p>
                             </div>
                         </div>
-                        <!-- Image 2 -->
                         <div class="test-wrapper">
                             <img src="Image/P10/Flat Lay 2.pic.jpg" alt="Warm up" class="test-img">
                             <div class="test-overlay">
                                 <p class="test-caption">Warm up with music</p>
                             </div>
                         </div>
-                        <!-- Image 3 -->
                         <div class="test-wrapper">
                             <img src="Image/P10/Flat Lay 3.pic.jpg" alt="Group practice" class="test-img">
                             <div class="test-overlay">
                                 <p class="test-caption">Group practice</p>
                             </div>
                         </div>
-                        <!-- Image 4 -->
                         <div class="test-wrapper">
                             <img src="Image/P10/Flat Lay 4.pic.jpg" alt="Separate practice" class="test-img">
                             <div class="test-overlay">
@@ -544,7 +454,6 @@
                 </div>
             </div>
 
-            <!-- COLUMN 2: Modularized -->
             <div class="concept-card">
                 <h3 class="direction-title">Direction 2 Modularized</h3>
                 
@@ -586,7 +495,6 @@
                 </div>
             </div>
 
-            <!-- COLUMN 3: Floor-Standing (Selected) -->
             <div class="concept-card selected-card">
                 <h3 class="direction-title">Direction 3 Floor-Standing</h3>
                 
@@ -635,10 +543,7 @@
 <!-- PAGE 11: DEVELOPMENT SKETCH -->
 <section class="development-section">
     <div class="development-container">
-        <!-- Title -->
         <h2 class="development-title">Development Sketch</h2>
-        
-        <!-- Image Wrapper -->
         <div class="dev-sketch-wrapper">
             <img src="Image/P11/DevelopSketch.png" alt="Development Sketches" class="development-img">
         </div>
@@ -649,13 +554,11 @@
 <section class="main-function-section">
     <div class="main-function-container">
         
-        <!-- Header -->
         <header class="section-header">
             <img src="Image/P3/Icon.png" alt="icon" class="header-icon">
             <h2 class="section-title">Main Function</h2>
         </header>
 
-        <!-- Main Diagram Image -->
         <div class="function-diagram-wrapper">
             <img src="Image/P12/Function.jpg" alt="Main Function Diagram" class="function-img">
         </div>
@@ -666,19 +569,15 @@
 <!-- PAGE 13: PROTOTYPE & STORYBOARD -->
 <section class="prototype-storyboard-section">
     
-    <!-- Decorative Gradient Blob (Behind content) -->
     <div class="gradient-blur-bar"></div>
 
     <div class="ps-container">
         
-        <!-- Part 1: Model Prototype -->
         <div class="ps-block">
             <h2 class="ps-title">Model Prototype</h2>
-            <!-- Ensure this image exists from the previous step -->
             <img src="Image/P13/Models.jpg" alt="Model Prototype Process" class="ps-img">
         </div>
 
-        <!-- Part 2: Storyboard (Updated to Grid) -->
         <div class="ps-block" style="margin-top: 80px;">
             <h2 class="ps-title">Storyboard</h2>
             
@@ -729,25 +628,20 @@
     </div>
 </section>
 
-<!-- ScrollSpy Script for Navigation Highlighting -->
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const navLinks = document.querySelectorAll('.nav-links a');
         
-        // Define the sections we are tracking
-        // Note: We use the IDs we set up in the previous step
         const sections = [
-            { link: navLinks[0], target: document.body }, // "FocoSpeaker" (Top of page)
-            { link: navLinks[1], target: document.getElementById('model-showcase') },   // "Model" (Page 3)
-            { link: navLinks[2], target: document.getElementById('research-process') }, // "Research" (Page 4)
-            { link: navLinks[3], target: document.getElementById('concept-prototype') } // "Prototype" (Page 10)
+            { link: navLinks[0], target: document.body }, 
+            { link: navLinks[1], target: document.getElementById('model-showcase') },   
+            { link: navLinks[2], target: document.getElementById('research-process') }, 
+            { link: navLinks[3], target: document.getElementById('concept-prototype') } 
         ];
 
         window.addEventListener('scroll', () => {
             let current = '';
             
-            // Get current scroll position + a buffer (150px) to highlight 
-            // the button slightly before the section hits the very top
             const scrollPosition = window.scrollY + 150;
             if (sections[3].target && scrollPosition >= sections[3].target.offsetTop) {
                 current = navLinks[3];
@@ -759,10 +653,7 @@
                 current = navLinks[0];
             }
 
-            // Remove 'active' class from all links
             navLinks.forEach(link => link.classList.remove('active'));
-
-            // Add 'active' class to the current link
             if (current) {
                 current.classList.add('active');
             }
@@ -770,6 +661,44 @@
     });
 </script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const videoElement = document.getElementById('carousel-video');
+        
+        const videoPlaylist = [
+            "Image/Animation/Top.mp4", 
+            "Image/Animation/Handle.mp4", 
+            "Image/Animation/Wheels.mp4"
+        ];
+        
+        let currentVideoIndex = 0;
+
+        videoElement.onended = function() {
+            videoElement.style.opacity = '0';
+
+            setTimeout(() => {
+                
+                currentVideoIndex = (currentVideoIndex + 1) % videoPlaylist.length;
+                videoElement.src = videoPlaylist[currentVideoIndex];
+                videoElement.load();
+
+                const playPromise = videoElement.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(_ => {
+                        videoElement.style.opacity = '1';
+                    })
+                    .catch(error => {
+                        console.log("播放出错:", error);
+                    });
+                }
+            }, 450); 
+        };
+    });
+</script>
+
+<footer class="site-footer">
+    <p>&copy; 2026 Nina Zhang. All rights reserved.</p>
+</footer>
 
 </body>
 <script>
@@ -783,38 +712,22 @@
         const rect = section.getBoundingClientRect();
         const windowHeight = window.innerHeight;
 
-        // --- MATH LOGIC ---
-        // 1. Define the scroll window (active area)
-        // Starts when the top of the section hits 70% of the screen height
         const startPoint = windowHeight * 0.7;
-        
-        // Ends when the bottom of the section hits the bottom of the screen
         const endPoint = windowHeight; 
-
-        // Current scroll position relative to the section
         const currentPos = startPoint - rect.top;
         const totalDistance = startPoint - (windowHeight - rect.height);
         
-        // Calculate basic progress (0.0 to 1.0)
         let progress = currentPos / totalDistance;
 
-        // Clamp values
         if (progress < 0) progress = 0;
         if (progress > 1) progress = 1;
 
-        // --- ANIMATION STAGES ---
-
-        // Stage 1: Fade in the Highlight Image (0% to 70% of the scroll)
-        // We map progress 0.0->0.7 to Opacity 0.0->1.0
         let imageOpacity = progress / 0.7;
         if (imageOpacity > 1) imageOpacity = 1;
         highlightImg.style.opacity = imageOpacity.toFixed(2);
 
-        // Stage 2: Fade in the Caption (80% to 100% of the scroll)
-        // Text appears only when we are near the bottom
         let textOpacity = 0;
         if (progress > 0.8) {
-            // Map 0.8->1.0 to Opacity 0.0->1.0
             textOpacity = (progress - 0.8) / 0.2;
         }
         caption.style.opacity = textOpacity.toFixed(2);

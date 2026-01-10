@@ -38,7 +38,6 @@ html {
     margin-top: 60px; 
 }
 
-/* --- Left Panel --- */
 .left-panel {
     flex: 1.7; 
     display: flex;
@@ -109,7 +108,6 @@ h1 {
     letter-spacing: 0.5px;
 }
 
-/* --- Right Panel --- */
 .right-panel {
     flex: 1.5; 
     position: relative; 
@@ -140,7 +138,6 @@ h1 {
     opacity: 0.9;
 }
 
-/* --- Navbar --- */
 .top-navbar {
     position: fixed; 
     top: 0;
@@ -184,12 +181,11 @@ h1 {
 }
 
 /* =========================================
-   PAGE 2: MODEL SECTION (UPDATED)
+   PAGE 2: MODEL SECTION (TALLER VERSION)
    ========================================= */
-
 .model-section {
     background-color: #FFFDEE; 
-    height: 80vh; 
+    height: 100vh;   
     width: 100%;
     display: flex;
     align-items: center; 
@@ -260,17 +256,20 @@ h1 {
     flex: 1.3;
     position: relative;
     width: 100%;
+    height: 100%; 
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0; 
 }
 
+
 .model-section .main-product-3d {
     aspect-ratio: 3 / 4;
     object-fit: cover; 
-    height: 70vh; 
-    width: auto; 
+    height: 82vh !important; 
+    width: auto !important; 
+    max-height: none !important; 
     border-radius: 24px; 
     box-shadow: none;
     display: block;
@@ -279,20 +278,10 @@ h1 {
 
 @media screen and (max-width: 1200px) {
     .model-section { height: auto; padding: 60px 0; }
-    .model-container { flex-direction: column; height: auto; gap: 40px; }
     
-    .model-info { 
-        align-items: center; 
-        text-align: center; 
-        gap: 40px;
-    }
-    .viewer-stage {
-        width: 100%;
-    }
     .model-section .main-product-3d {
-        height: auto;
-        width: 80%;
-        max-width: 400px;
+        width: 85% !important; 
+        height: auto !important;
         aspect-ratio: 3 / 4;
     }
 }
@@ -447,7 +436,6 @@ h1 {
     margin: 0;
 }
 
-/* Find this class in your CSS and update it */
 .story-quote-large {
     color: #491805;
     text-align: right;
@@ -457,14 +445,11 @@ h1 {
     line-height: 1.3; 
     margin: 0;
     transform: translateY(-50px); 
-    
-    /* Added properties to reduce width */
-    max-width: 320px;   /* Controls the maximum width of the text block */
-    margin-left: auto;  /* Pushes the text block to the right side */
+    max-width: 320px;  
+    margin-left: auto; 
 }
 
 
-/* --- RIGHT COLUMN: Research Interviews --- */
 .interviews-col {
     flex: 1.1; 
     padding-top: 0px;
@@ -514,7 +499,7 @@ h1 {
     flex-grow: 1;
     position: relative;
     box-shadow: 0 5px 15px rgba(73, 24, 5, 0.05);
-    width: 100%; /* Ensure it takes full width */
+    width: 100%; 
 }
 
 
@@ -558,7 +543,6 @@ h1 {
     margin-top: 8px;
 }
 
-/* --- Responsive --- */
 @media screen and (max-width: 1600px) {
     .model-headline { font-size: 45px; }
     .thumb-card { height: 120px; } 
@@ -577,18 +561,13 @@ h1 {
     .left-panel { flex: 1.2; padding-left: 30px; padding-bottom: 80px; }
     .right-panel { flex: 1; }
     .model-main { width: 150%; left: 50%; }
-
-    /* Page 2 Mobile Adjustments */
     .model-section { height: auto; padding: 50px 0; overflow: visible; }
     .model-container { flex-direction: column; text-align: center; height: auto; }
     .model-info { align-items: center; }
     .model-headline { font-size: 40px; text-align: center; }
     .controls { right: 10%; bottom: 10%; }
-    
     .thumbnail-row { justify-content: center; }
     .thumb-card { width: 200px; flex: none; } 
-    
-    /* Page 4 Mobile Adjustments */
     .research-details-container {
         flex-direction: column;
         gap: 60px;
@@ -658,7 +637,6 @@ h1 {
     font-weight: 600;
 }
 
-/* --- ANIMATION CONTAINER --- */
 .journey-map-display {
     width: 100%;
     position: relative;
@@ -667,18 +645,14 @@ h1 {
     align-items: center;
 }
 
-/* Base Map Image */
 .journey-img {
     width: 100%; 
     height: auto;
     object-fit: contain;
     display: block;
-    
-    /* REMOVED transition for instant scroll syncing */
     opacity: 1; 
 }
 
-/* Brown Overlay Image */
 .overlay-img {
     position: absolute;
     top: 50%;
@@ -686,12 +660,9 @@ h1 {
     transform: translate(-50%, -50%);
     width: 100%;
     height: auto;
-    
-    /* REMOVED transition for instant scroll syncing */
     opacity: 0; 
 }
 
-/* Responsive */
 @media screen and (max-width: 1200px) {
     .journey-description { font-size: 18px; }
 }
@@ -734,40 +705,32 @@ h1 {
     font-weight: 600;
 }
 
-/* --- Main Card Layout --- */
 .position-cards {
     display: flex;
     width: 100%;
-    gap: 25px; /* Slightly larger gap for the pop effect */
+    gap: 25px; 
 }
 
 .position-card {
-    background-color: #F6E7C6; /* UPDATED COLOR */
+    background-color: #F6E7C6; 
     border-radius: 20px;
     padding: 30px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
-    /* UPDATED: Darker, more visible shadow */
     box-shadow: 0 10px 30px rgba(73, 24, 5, 0.15); 
-    
-    /* Smooth transition for the pop effect */
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* UPDATED: More obvious Pop Up on Hover */
 .position-card:hover {
-    transform: translateY(-12px); /* Lifts higher */
-    box-shadow: 0 25px 50px rgba(73, 24, 5, 0.25); /* Shadow gets much deeper */
-    z-index: 2; /* Ensures it pops over neighbors if close */
+    transform: translateY(-12px); 
+    box-shadow: 0 25px 50px rgba(73, 24, 5, 0.25); 
+    z-index: 2; 
 }
 
-/* Width Control */
 .wide-card { flex: 2; }    
 .standard-card { flex: 1; } 
 
-/* --- Typography & Colors --- */
 .card-text-wrapper {
     margin-bottom: 25px;
     min-height: 80px; 
@@ -789,18 +752,16 @@ h1 {
     margin: 0;
 }
 
-/* Color Rules */
 .wide-card .card-heading,
 .wide-card .card-desc {
-    color: #FF6F20; /* Orange for Card 1 */
+    color: #FF6F20; 
 }
 
 .standard-card .card-heading,
 .standard-card .card-desc {
-    color: #49261E; /* Dark Brown for Card 2 & 3 */
+    color: #49261E; 
 }
 
-/* --- Images --- */
 .card-img {
     width: 100%;
     height: auto;
@@ -823,7 +784,6 @@ h1 {
     width: 100%;
 }
 
-/* --- Responsive --- */
 @media screen and (max-width: 1024px) {
     .position-cards {
         flex-direction: column;
@@ -859,35 +819,30 @@ h1 {
     flex-direction: column;
 }
 
-/* --- Main Split Layout --- */
 .analysis-main-split {
     display: flex;
-    gap: 60px; /* Gap between Left Col and Right Col */
+    gap: 60px; 
     width: 100%;
-    align-items: flex-start; /* Align to top */
+    align-items: flex-start; 
 }
 
-/* Left Column (Problem + Idea) - Slightly Wider */
 .left-split-col {
     flex: 1.1; 
     display: flex;
     flex-direction: column;
-    gap: 30px; /* Vertical gap between Problem and Initial Idea */
+    gap: 30px; 
 }
 
-/* Right Column (Tech Research) */
 .right-split-col {
     flex: 1; 
     display: flex;
     flex-direction: column;
 }
 
-/* --- Block Styling --- */
 .analysis-block {
     width: 100%;
 }
 
-/* Initial Idea Header Specifics */
 .initial-idea-header-group {
     margin-bottom: 10px;
     display: flex;
@@ -911,7 +866,6 @@ h1 {
     font-weight: 300;
 }
 
-/* --- Split Visuals (Design Opps + Solutions) --- */
 .split-visual-row {
     display: flex;
     gap: 30px; 
@@ -922,7 +876,6 @@ h1 {
     flex: 1; 
 }
 
-/* --- Image Styling --- */
 .img-wrapper {
     margin-top: 20px;
     width: 100%;
@@ -936,7 +889,6 @@ h1 {
     box-shadow: 0 4px 20px rgba(73, 24, 5, 0.05); 
 }
 
-/* --- Mobile / Responsive --- */
 @media screen and (max-width: 1024px) {
     .analysis-main-split {
         flex-direction: column;
@@ -972,7 +924,6 @@ h1 {
     align-items: center;
 }
 
-/* --- Content Row (Title + Image) --- */
 .scenario-content-row {
     display: flex;
     align-items: center; 
@@ -980,7 +931,6 @@ h1 {
     width: 100%;
 }
 
-/* --- Vertical Title Styling --- */
 .vertical-scenario-title {
     font-family: 'MuseoModerno', sans-serif;
     font-weight: 300;
@@ -993,39 +943,34 @@ h1 {
     white-space: nowrap; 
 }
 
-/* --- Image Wrapper (Animation Context) --- */
 .scenario-image-wrapper {
     flex: 1; 
-    position: relative; /* Crucial for stacking images */
+    position: relative; 
     display: flex;
     justify-content: center;
 }
 
-/* Common Image Styles */
 .scenario-img {
     width: 90%;
     height: auto;
     display: block;
     border-radius: 20px; 
-    transition: opacity 0.1s linear; /* Smooth fade handled by JS */
+    transition: opacity 0.1s linear; 
 }
 
-/* The Base Image sits normally in the flow */
 .base-img {
     position: relative; 
     z-index: 1;
 }
 
-/* The Highlight Image sits ON TOP of the base image */
 .highlight-img {
     position: absolute;
     top: 0;
-    left: 5%; /* Matches the 90% width centering (5% margin left/right) */
+    left: 5%; 
     z-index: 2;
-    opacity: 0; /* Hidden by default */
+    opacity: 0; 
 }
 
-/* --- Caption Styling --- */
 .scenario-caption {
     font-family: 'Figtree', sans-serif;
     font-size: 16px;
@@ -1035,9 +980,8 @@ h1 {
     margin-top: 30px; 
     max-width: 1000px;
     font-weight: 300;
-    
-    opacity: 0; /* Hidden by default */
-    transition: opacity 0.5s ease; /* Fade in duration */
+    opacity: 0; 
+    transition: opacity 0.5s ease;
 }
 
 .scenario-caption .highlight-blue {
@@ -1045,7 +989,6 @@ h1 {
     font-weight: 600;
 }
 
-/* --- Responsive (Mobile) --- */
 @media screen and (max-width: 768px) {
     .scenario-content-row {
         flex-direction: column;
@@ -1059,7 +1002,7 @@ h1 {
     }
     
     .highlight-img {
-        left: 5%; /* Maintain alignment on mobile */
+        left: 5%; 
     }
 }
 
@@ -1072,7 +1015,6 @@ h1 {
     display: flex;
     justify-content: center;
     width: 100%;
-    /* CRITICAL FIX: explicit visible overflow prevents text clipping */
     overflow: visible; 
 }
 
@@ -1085,7 +1027,6 @@ h1 {
 }
 
 .ideation-title {
-    /* Updated Typography per your request */
     font-family: 'MuseoModerno', sans-serif;
     font-size: 50px;
     font-style: normal;
@@ -1113,14 +1054,12 @@ h1 {
     mix-blend-mode: multiply; 
 }
 
-/* --- Mobile Responsiveness --- */
 @media screen and (max-width: 768px) {
     .ideation-section {
         padding: 60px 0;
     }
     
     .ideation-title {
-        /* Scale down for mobile so it doesn't break the layout */
         font-size: 48px; 
         line-height: 1.2;
         margin-bottom: 40px;
@@ -1145,7 +1084,6 @@ h1 {
     flex-direction: column;
 }
 
-/* Header Styling */
 .concept-header {
     margin-bottom: 50px;
 }
@@ -1164,7 +1102,6 @@ h1 {
     font-weight: 700;
 }
 
-/* Columns Layout */
 .concept-columns {
     display: flex;
     gap: 30px;
@@ -1172,7 +1109,6 @@ h1 {
     align-items: stretch;
 }
 
-/* --- Card Styling --- */
 .concept-card {
     background-color: #FAEFD8;
     border-radius: 20px;
@@ -1213,7 +1149,6 @@ h1 {
     object-fit: contain;
 }
 
-/* --- Prototype Testing (Interactive Overlay) --- */
 .testing-section {
     width: 100%;
     margin-bottom: 30px;
@@ -1237,13 +1172,12 @@ h1 {
     width: 100%;
 }
 
-/* New Wrapper for Image + Overlay */
 .test-wrapper {
-    position: relative; /* Context for absolute overlay */
-    width: 80%; /* Width matches your previous image width */
+    position: relative; 
+    width: 80%; 
     min-height: 100px;
     border-radius: 12px;
-    overflow: hidden; /* Ensures overlay doesn't spill out */
+    overflow: hidden; 
     cursor: pointer;
 }
 
@@ -1255,26 +1189,20 @@ h1 {
     background-color: rgba(0,0,0,0.05); 
 }
 
-/* The Overlay */
 .test-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(73, 24, 5, 0.60); /* #491805 at 60% opacity */
-    
-    /* Center Text */
+    background-color: rgba(73, 24, 5, 0.60);
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    /* Animation State */
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
-/* Hover Effect: Show Overlay */
 .test-wrapper:hover .test-overlay {
     opacity: 1;
 }
@@ -1289,7 +1217,6 @@ h1 {
     margin: 0;
 }
 
-/* --- Pros & Cons List (Interactive Pop) --- */
 .pros-cons-section {
     margin-top: auto;
     width: 100%;
@@ -1328,16 +1255,13 @@ h1 {
     
     box-shadow: 0 2px 5px rgba(0,0,0,0.02);
     box-sizing: border-box; 
-    
-    /* ADDED: Smooth transition for hover */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: default;
 }
 
-/* ADDED: Pop up on hover */
 .pc-item:hover {
-    transform: translateY(-5px); /* Moves up slightly */
-    box-shadow: 0 8px 15px rgba(73, 24, 5, 0.1); /* Increases shadow */
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 15px rgba(73, 24, 5, 0.1); 
 }
 
 .pc-icon {
@@ -1348,7 +1272,6 @@ h1 {
     display: block;
 }
 
-/* --- Responsive --- */
 @media screen and (max-width: 1024px) {
     .concept-columns {
         flex-direction: column;
@@ -1379,29 +1302,27 @@ h1 {
     width: 90%;
     max-width: 1600px;
     display: flex;
-    /* IMPORTANT: Align side-by-side */
     flex-direction: row; 
-    align-items: center; /* Vertically center the text relative to the image */
+    align-items: center; 
     justify-content: center;
-    gap: 80px; /* Space between the vertical text and the image */
+    gap: 80px; 
 }
 
 .development-title {
     color: #491805;
     font-family: 'MuseoModerno', sans-serif;
-    font-size: 64px; /* Larger size for impact */
+    font-size: 64px; 
     font-weight: 300;
     line-height: 1;
     margin: 10;
     
-    /* VERTICAL TEXT MAGIC */
-    writing-mode: vertical-rl; /* Makes text vertical */
-    transform: rotate(180deg); /* Flips it to read Bottom-to-Top */
-    white-space: nowrap; /* Prevents wrapping */
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    white-space: nowrap;
 }
 
 .dev-sketch-wrapper {
-    flex: 1; /* Allows the image to take up the remaining space */
+    flex: 1; 
     display: flex;
     justify-content: center;
 }
@@ -1415,19 +1336,16 @@ h1 {
     mix-blend-mode: multiply; 
 }
 
-/* --- Responsive (Mobile) --- */
 @media screen and (max-width: 768px) {
     .development-section {
         padding: 60px 0;
     }
     
-    /* On mobile, switch back to horizontal stack */
     .development-container {
         flex-direction: column; 
         gap: 40px;
     }
     
-    /* Reset text to horizontal on mobile */
     .development-title {
         writing-mode: horizontal-tb;
         transform: none;
@@ -1452,16 +1370,13 @@ h1 {
     max-width: 1600px;
     display: flex;
     flex-direction: column;
-    /* Aligns header to the left */
     align-items: flex-start; 
 }
 
 .function-diagram-wrapper {
-    width: 100%; /* Changed to 100% to allow true centering */
+    width: 100%;
     display: flex;
-    justify-content: center; /* Centers the image horizontally */
-    
-    /* Pulls the image upward to be closer to the header */
+    justify-content: center; 
     margin-top: -50px; 
     
     position: relative;
@@ -1477,13 +1392,12 @@ h1 {
     mix-blend-mode: multiply; 
 }
 
-/* --- Responsive --- */
 @media screen and (max-width: 768px) {
     .main-function-section {
         padding: 60px 0;
     }
     .function-diagram-wrapper {
-        margin-top: 0; /* Reset on mobile so it doesn't overlap text */
+        margin-top: 0; 
     }
 }
 
@@ -1491,43 +1405,38 @@ h1 {
    PAGE 13: PROTOTYPE & STORYBOARD
    ========================================= */
 .prototype-storyboard-section {
-    background-color: #FFFAF1; /* Requested Background */
+    background-color: #FFFAF1; 
     position: relative;
     width: 100%;
     padding: 100px 0 150px 0;
-    overflow: hidden; /* Critical to hide the massive gradient overflow */
+    overflow: hidden;
     display: flex;
     justify-content: center;
 }
 
-/* The Gradient Bar */
 .gradient-blur-bar {
     position: absolute;
-    /* Centering the massive blob */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(-0.99deg); /* Requested rotation */
-    
-    /* Requested Dimensions */
+    transform: translate(-50%, -50%) rotate(-0.99deg); 
     width: 3391.36px;
     height: 374.39px;
     
-    /* Requested Fill & Filter */
     background: linear-gradient(90deg, rgba(255, 147, 32, 0.50) 0%, rgba(255, 231, 133, 0.50) 100%);
     filter: blur(150px);
     
-    pointer-events: none; /* Allows clicking through it */
-    z-index: 1; /* Sits above background, below content */
+    pointer-events: none; 
+    z-index: 1; 
 }
 
 .ps-container {
     position: relative;
-    z-index: 2; /* Sits on top of the gradient */
+    z-index: 2; 
     width: 90%;
     max-width: 1600px;
     display: flex;
     flex-direction: column;
-    gap: 80px; /* Space between the two blocks */
+    gap: 80px;
 }
 
 .ps-block {
@@ -1541,7 +1450,7 @@ h1 {
     font-family: 'MuseoModerno', sans-serif;
     font-size: 40px;
     font-weight: 300;
-    margin: 0 0 40px 0; /* Space below title */
+    margin: 0 0 40px 0; 
 }
 
 .ps-img {
@@ -1549,11 +1458,9 @@ h1 {
     height: auto;
     display: block;
     object-fit: contain;
-    /* Optional: Blend mode if your images have white backgrounds */
     mix-blend-mode: multiply; 
 }
 
-/* --- Responsive --- */
 @media screen and (max-width: 768px) {
     .prototype-storyboard-section {
         padding: 60px 0;
@@ -1564,7 +1471,6 @@ h1 {
         text-align: center;
     }
     .gradient-blur-bar {
-        /* Scale down the effect slightly for mobile performance */
         opacity: 0.7; 
         height: 200px;
     }
@@ -1573,17 +1479,13 @@ h1 {
 /* =========================================
    PAGE 13 UPDATES (8-Panel Storyboard)
    ========================================= */
-
-/* The Grid Container */
 .storyboard-grid {
     display: grid;
-    /* 4 columns of equal width */
     grid-template-columns: repeat(4, 1fr); 
-    gap: 30px 20px; /* 30px vertical gap, 20px horizontal gap */
+    gap: 30px 20px; 
     width: 100%;
 }
 
-/* The Individual Storyboard Item Wrapper */
 .sb-item {
     display: flex;
     flex-direction: column;
@@ -1591,7 +1493,6 @@ h1 {
     text-align: center;
 }
 
-/* Image Styles */
 .sb-img {
     width: 100%;
     height: auto;
@@ -1599,38 +1500,52 @@ h1 {
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(73, 24, 5, 0.05);
     transition: transform 0.3s ease;
-    margin-bottom: 15px; /* Space between image and text */
+    margin-bottom: 15px;
 }
 
 .sb-img:hover {
     transform: scale(1.03);
 }
 
-/* Caption Styles */
 .sb-caption {
-    color: #491805; /* Your dark brown text color */
+    color: #491805; 
     font-family: 'Figtree', sans-serif;
-    font-size: 14px; /* Small, legible text size */
+    font-size: 14px;
     font-weight: 300;
     line-height: 1.4;
     margin: 0;
-    max-width: 95%; /* Prevents text from hitting the very edges */
-    opacity: 0.8; /* Slightly softer text color */
+    max-width: 95%;
+    opacity: 0.8; 
 }
 
-/* --- Responsive Layout --- */
 
-/* Tablet: Switch to 2 rows of 4 (Keep 4 cols if screen fits, else 2) */
 @media screen and (max-width: 1200px) {
     .storyboard-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 40px;
     }
 }
 
-/* Mobile: Stack vertically */
 @media screen and (max-width: 600px) {
     .storyboard-grid {
-        grid-template-columns: 1fr; /* 1 column for phones */
+        grid-template-columns: 1fr;
     }
+}
+
+/* =========================================
+   FOOTER SECTION
+   ========================================= */
+.site-footer {
+    width: 100%;
+    padding: 40px 0; 
+    text-align: center; 
+    background-color: #FFFDEE;
+}
+
+.site-footer p {
+    color: #491805; 
+    font-family: sans-serif;  
+    font-size: 14px;  
+    opacity: 0.6;  
+    margin: 0;
 }
